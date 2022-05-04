@@ -7,10 +7,10 @@ set -e
 npm run build
 
 # 进入生成的文件夹
-cd dist
+cd docs/.vuepress/dist
 
 # 如果是发布到自定义域名
-echo 'notes.lllllan.cn' > CNAME
+echo 'blog.lllllan.cn' > CNAME
 
 git init
 git add -A
@@ -20,6 +20,6 @@ git commit -m '更新'
 # git push -f git@github.com:lllllan-fv/lllllan-fv.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>  REPO=github上的项目
-git push -f git@github.com:lllllan-fv/notes.git master:notes
+git push -f git@github.com:lllllan-fv/blog.git master:blog
 
 cd -

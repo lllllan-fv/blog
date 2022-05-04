@@ -4,9 +4,12 @@
   "description": "A project of vuepress-theme-hope",
   "license": "MIT",
   "scripts": {
+    "build": "vuepress build docs",
     "docs:build": "vuepress build docs",
-    "docs:clean-dev": "vuepress dev docs --clean-cache",
-    "docs:dev": "vuepress dev docs"
+    "docs:clean-dev": "vuepress dev docs --no-cache",
+    "dev": "vuepress dev docs",
+    "docs:dev": "vuepress dev docs",
+    "docs:eject-theme": "vuepress eject-hope docs"
   },
   "devDependencies": {
     "@vuepress/client": "^2.0.0-beta.43",
