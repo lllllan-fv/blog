@@ -14,7 +14,7 @@ export default hopeTheme({
 
   logo: "/logo.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com/lllllan-fv/blog",
 
   docsDir: "docs",
 
@@ -24,7 +24,7 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebar,
 
-  footer: "默认页脚",
+  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021095794号</a>',
 
   displayFooter: true,
 
