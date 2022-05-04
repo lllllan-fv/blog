@@ -31,8 +31,8 @@ export default hopeTheme({
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
-    description: "一个前端开发者",
-    intro: "/intro.html",
+    description: "",
+    intro: "",
     medias: {
       // Dingding: "https://example.com",
       // Email: "https://example.com",,
