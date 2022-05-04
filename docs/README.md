@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: lllllan
+title: home
 heroImage: /logo.png
 heroText: lllllan
 tagline: 盛意以江河，江河不及你
@@ -28,5 +28,4 @@ footer: MIT Licensed | Copyright © 2022-present lllllan
 ###  :convenience_store: 杂项
 
 - [域名管理](grocery/domain-name-manage/)
-
 
