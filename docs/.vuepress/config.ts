@@ -16,6 +16,14 @@ export default defineUserConfig({
         href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
       },
     ],
+    [
+      "link",
+      {
+        // 图标仓库
+        rel: "stylesheet",
+        href: "//at.alicdn.com/t/font_3381669_dq96431dbti.css",
+      },
+    ],    
   ],
 
   theme,

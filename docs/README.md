@@ -11,21 +11,19 @@ actions:
  
 
 features:
-#  - title: Markdown 增强
-#    icon: markdown
-#    details: 新增文字对齐、上下角标、脚注、标记、任务列表、数学公式、流程图、图表与幻灯片支持
-#    link: https://vuepress-theme-hope.github.io/v2/zh/guide/markdown/
+  - title: 杂货店
+    icon: shangdian
+    details: 关于我不知道怎么分类于是开了间杂货店这件事
+    link: /grocery/
+
+  - title: 休闲娱乐
+    icon: yule
+    details: 这才是人生的意义所在！
+    link: /amusement/
 
 
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan
 ---
 
-
-
-
-
-###  :convenience_store: 杂项
-
-- [域名管理](grocery/domain-name-manage/)
 
