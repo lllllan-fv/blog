@@ -1,6 +1,6 @@
 ---
 # 这是页面的图标
-icon: page
+icon: shangdian
 
 # 这是文章的标题
 title: 杂货店

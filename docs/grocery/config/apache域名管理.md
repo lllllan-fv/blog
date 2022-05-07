@@ -1,6 +1,6 @@
 ---
 # 这是页面的图标
-icon: page
+icon: setting
 
 # 这是文章的标题
 title: Apache 域名管理
