@@ -3,11 +3,11 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 
 export default hopeTheme({
-  hostname: "https//blog.lllllan.cn",
+  hostname: "http://blog.lllllan.cn",
 
   author: {
     name: "lllllan",
-    url: "https//lllllan.cn",
+    url: "http://lllllan.cn",
   },
 
   iconPrefix: "iconfont icon-",
