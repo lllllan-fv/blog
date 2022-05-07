@@ -3,7 +3,7 @@ import theme from "./theme";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "lllllan blog",
+  title: "lllllan",
   description: "盛意以江河，江河不及你",
 
   base: "/",

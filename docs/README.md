@@ -1,7 +1,7 @@
 ---
 home: true
 icon: home
-title: home
+title: 
 heroImage: /logo.png
 heroText: lllllan
 tagline: 盛意以江河，江河不及你
