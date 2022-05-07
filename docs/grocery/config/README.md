@@ -5,6 +5,8 @@ icon: page
 # 这是文章的标题
 title: 各种配置
 
+index: false
+
 # 一个页面可以有多个分类
 category: 
 
