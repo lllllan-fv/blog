@@ -5,7 +5,8 @@ title: home
 heroImage: /logo.png
 heroText: lllllan
 tagline: 盛意以江河，江河不及你
-actions:
+
+# actions:
 #  - text: 使用指南 💡
 #    link: /guide/
  
@@ -25,5 +26,4 @@ features:
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan
 ---
-
 
