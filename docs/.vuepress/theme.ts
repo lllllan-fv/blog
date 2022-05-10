@@ -24,7 +24,7 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebar,
 
-  footer: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021095794号</a>',
+  footer: '<a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2021095794号 </a><br><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002015830"style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><imgsrc="personal_data/img/beian.png" style="float:left;" />浙公网安备 33011002015830号</a>',
 
   displayFooter: true,
 
