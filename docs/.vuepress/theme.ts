@@ -62,4 +62,12 @@ export default hopeTheme({
       },
     },
   },
+
+  themeColor: {
+    1: "#2196f3",
+    // green: "#3eaf7c", 
+    2:"#46c3db",
+    3:"#f3558e",
+    4:"#85203b"
+  }
 });
