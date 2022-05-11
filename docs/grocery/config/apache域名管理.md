@@ -14,16 +14,16 @@ category:
 tag:
 
 # 你可以自定义页脚
-# footer: 这是测试显示的页脚b
+# footer: 这是测试显示的页脚
 ---
 
 
 
-> Apache 上管理不同的域名对应不同的项目
+## HTTP
 
 
 
-找到 `/apache/httpd.conf` ，在文件末添加你需要管理的域名
+找到 `/apache/conf/httpd.conf` ，在文件末添加你需要管理的域名
 
 ```xml-dtd
 <VirtualHost *:80>
@@ -34,7 +34,35 @@ tag:
 
 
 
-**重启服务器**
+## HTTPS
+
+配置证书见👉 [Apache配置SSL证书](apache配置SSL证书)
+
+```xml-dtd
+<VirtualHost 0.0.0.0:443>
+		#你自己项目存放的目录
+        DocumentRoot "/data/www/default/personal_data/course/"
+        
+        #填写证书名称
+        ServerName course.lllllan.cn
+        
+        #启用 SSL 功能
+        SSLEngine on 
+        
+        #证书文件的路径
+        SSLCertificateFile /usr/local/apache/conf/ssl/course.lllllan.cn.crt 
+        
+        #私钥文件的路径
+        SSLCertificateKeyFile /usr/local/apache/conf/ssl/course.lllllan.cn.key 
+        
+        #证书链文件的路径
+        SSLCertificateChainFile /usr/local/apache/conf/ssl/root_bundle.crt 
+</VirtualHost>
+```
+
+
+
+## 重启服务器
 
 ```bash
 service httpd restart
