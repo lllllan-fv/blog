@@ -24,6 +24,11 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebar,
 
+  // 返回顶部按钮
+  backToTop: true,
+  // 全屏按钮
+  fullscreen: false,
+
   footer: '<a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2021095794号 </a><br><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002015830"style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><imgsrc="personal_data/img/beian.png" style="float:left;" />浙公网安备 33011002015830号</a>',
 
   displayFooter: true,
@@ -66,8 +71,8 @@ export default hopeTheme({
   themeColor: {
     1: "#2196f3",
     // green: "#3eaf7c", 
-    2:"#46c3db",
-    3:"#f3558e",
-    4:"#85203b"
+    2: "#46c3db",
+    3: "#f3558e",
+    4: "#85203b"
   }
 });
