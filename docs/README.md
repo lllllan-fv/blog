@@ -22,6 +22,11 @@ features:
     details: 这才是人生的意义所在！
     link: /amusement/
 
+  - title: Redis
+    icon: redis
+    details: 只会用 api 就只能当码农了，多学一点，摩多摩多
+    link: /redis/
+
 
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan
