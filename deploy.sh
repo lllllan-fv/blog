@@ -23,9 +23,3 @@ git commit -m '更新'
 git push -f git@github.com:lllllan-fv/blog.git master:blog
 
 cd -
-
-ssh lllllan.cn
-
-cd /data/www/default/blog/
-
-git pull origin master
