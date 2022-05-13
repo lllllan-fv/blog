@@ -13,8 +13,10 @@
   },
   "devDependencies": {
     "@vuepress/client": "^2.0.0-beta.43",
+    "highlight.js": "^11.5.1",
     "vue": "^3.2.31",
     "vuepress": "^2.0.0-beta.43",
+    "vuepress-plugin-add-this": "^2.0.0-beta.56",
     "vuepress-theme-hope": "^2.0.0-beta.49"
   }
 }

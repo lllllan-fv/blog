@@ -25,7 +25,7 @@ export default hopeTheme({
   sidebar: sidebar,
 
   // 返回顶部按钮
-  // backToTop:,
+  backToTop: true,
   // 全屏按钮
   fullscreen: false,
 
@@ -65,7 +65,10 @@ export default hopeTheme({
       presentation: {
         plugins: ["highlight", "math", "search", "notes", "zoom"],
       },
-    },
+    }, 
+
+    prismjs:true,
+ 
   },
 
   themeColor: {
