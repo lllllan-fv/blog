@@ -25,7 +25,7 @@ export default hopeTheme({
   sidebar: sidebar,
 
   // 返回顶部按钮
-  backToTop: true,
+  // backToTop:,
   // 全屏按钮
   fullscreen: false,
 
