@@ -1,6 +1,6 @@
 ---
 # 这是页面的图标
-icon: setting
+icon: Apache
 
 # 这是文章的标题
 title: Apache 设置 http 自动跳转 https

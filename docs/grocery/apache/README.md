@@ -1,9 +1,9 @@
 ---
 # 这是页面的图标
-icon: setting
+icon: Apache
 
 # 这是文章的标题
-title: 各种配置
+title: Apache 配置
 
 index: false
 
