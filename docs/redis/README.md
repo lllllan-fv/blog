@@ -7,7 +7,7 @@ title: Redis
 
 # number | boolean
 # 侧边栏按 indx 从小到大排序，false 则不出现在侧边栏
-index: false
+index: true
 
 # 写作日期
 # date: 2022-01-01

@@ -36,7 +36,7 @@ tag:
 
 ## HTTPS
 
-配置证书见👉 [Apache配置SSL证书](apache配置SSL证书)
+配置证书见👉 [Apache配置SSL证书](config-ssl-certificate)
 
 ```xml-dtd
 <VirtualHost 0.0.0.0:443>
