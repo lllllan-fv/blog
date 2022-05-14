@@ -3,7 +3,7 @@
 icon: creative
 
 # 这是文章的标题
-title: 批量修改 PNG 为 JPG
+title: 批量修改文件后缀
 
 # number | boolean
 # 侧边栏按 indx 从小到大排序，false 则不出现在侧边栏
