@@ -152,3 +152,10 @@ rdbchecksum yes
 - 版本兼容 RDB 文件问题；
 
 针对 RDB 不适合实时持久化的问题，Redis 提供了 AOF 持久化方式来解决
+
+
+
+## 参考
+
+- [RDB 持久化 | Java 全栈知识体系 (pdai.tech)](https://pdai.tech/md/db/nosql-redis/db-redis-x-rdb-aof.html#rdb-持久化)
+- [RDB 快照是怎么实现的？ | 小林coding (xiaolincoding.com)](https://xiaolincoding.com/redis/storage/rdb.html)

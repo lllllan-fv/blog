@@ -42,6 +42,9 @@ tag:
 
 **目前 Redis 支持的有 RDB、AOF 两种持久化方案。**
 
+- [RDB 持久化](rdb)
+- [AOF 持久化](aof)
+
 
 
 ## 参考
