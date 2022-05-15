@@ -25,7 +25,7 @@ tag:
 
 找到 `/apache/conf/httpd.conf` ，在文件末添加你需要管理的域名
 
-```xml-dtd
+```yaml
 <VirtualHost *:80>
 	DocumentRoot "*/data/www/default/project" 	# 项目的路径
 	ServerName project.lllllan.cn 				# 域名
@@ -38,7 +38,7 @@ tag:
 
 配置证书见👉 [Apache配置SSL证书](config-ssl-certificate)
 
-```xml-dtd
+```yaml
 <VirtualHost 0.0.0.0:443>
 		#你自己项目存放的目录
         DocumentRoot "/data/www/default/personal_data/course/"
@@ -64,7 +64,7 @@ tag:
 
 ## 重启服务器
 
-```bash
+```sh
 service httpd restart
 ```
 

@@ -104,7 +104,7 @@ whereis apache
 
 注意是取消注释，即将行首的 `#` 删除
 
-```
+```yaml
 LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
 LoadModule ssl_module modules/mod_ssl.so
 ```
@@ -113,7 +113,7 @@ LoadModule ssl_module modules/mod_ssl.so
 
 > 在 `/conf/extra/httpd-ssl.conf` 文件中写入以下内容
 
-```xml-dtd
+```yaml
 Listen 443
 AddType application/x-x509-ca-cert .crt
 AddType application/x-pkcs7-crl .crl
@@ -154,7 +154,7 @@ Include conf/extra/httpd-ssl.conf
 
 > 配置域名
 
-```xml-dtd
+```yaml
 <VirtualHost 0.0.0.0:443>
 		# 你自己项目存放的目录
         DocumentRoot "/data/www/default/personal_data/course/"
