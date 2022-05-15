@@ -7,7 +7,7 @@ title: AOF 持久化
 
 # number | boolean
 # 侧边栏按 indx 从小到大排序，false 则不出现在侧边栏
-index: true
+index: 2
 
 # 写作日期
 # date: 2022-01-01
