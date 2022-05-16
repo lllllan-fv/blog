@@ -32,13 +32,13 @@ tag:
 
 1. 取消以下注释（如果行首有 `#`，把井号删除）
 
-```yaml
+```sh
 LoadModule rewrite_module modules/mod_rewrite.so
 ```
 
 2. 将所有 `AllowOverride None` 为 `AllowOverride All`
 
-```yaml
+```sh
 AllowOverride All
 ```
 
@@ -50,7 +50,7 @@ AllowOverride All
 
 
 
-```yaml
+```sh
 RewriteEngine on
 RewriteCond %{SERVER_PORT} !^443$
 RewriteRule (.*) https://%{SERVER_NAME}/$1 [R]

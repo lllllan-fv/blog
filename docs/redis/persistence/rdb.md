@@ -64,7 +64,7 @@ Redis 的自动触发是满足特定条件下，自动执行 `bgsave` 命令。
 
 > redis.conf 配置
 
-```yaml
+```sh
 # 周期性执行条件的设置格式为
 # save <seconds> <changes>
 

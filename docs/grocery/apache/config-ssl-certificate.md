@@ -92,7 +92,7 @@ tag:
 
 你可以通过以下命令快速找到 Apache 的位置
 
-```bash
+```sh
 whereis apache
 ```
 
@@ -104,7 +104,7 @@ whereis apache
 
 注意是取消注释，即将行首的 `#` 删除
 
-```yaml
+```sh
 LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
 LoadModule ssl_module modules/mod_ssl.so
 ```
@@ -113,7 +113,7 @@ LoadModule ssl_module modules/mod_ssl.so
 
 > 在 `/conf/extra/httpd-ssl.conf` 文件中写入以下内容
 
-```yaml
+```sh
 Listen 443
 AddType application/x-x509-ca-cert .crt
 AddType application/x-pkcs7-crl .crl
@@ -154,7 +154,7 @@ Include conf/extra/httpd-ssl.conf
 
 > 配置域名
 
-```yaml
+```sh
 <VirtualHost 0.0.0.0:443>
 		# 你自己项目存放的目录
         DocumentRoot "/data/www/default/personal_data/course/"
@@ -180,7 +180,7 @@ Include conf/extra/httpd-ssl.conf
 
 ## 重启服务器
 
-```bash
+```sh
 service httpd restart
 ```
 
