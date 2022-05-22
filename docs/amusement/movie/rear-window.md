@@ -7,7 +7,7 @@ title: Rear Window（后窗）
 
 # number | boolean
 # 侧边栏按 indx 从小到大排序，false 则不出现在侧边栏
-# index: 4
+index: 4
 
 # 写作日期
 date: 2022-05-08
