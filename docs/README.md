@@ -32,6 +32,11 @@ features:
     details: spring-boot 项目 Java 工具类合集
     link: /java-utils/
 
+  - title: Linux 烩总
+    icon: tool
+    details: Linux 学习笔记和查询手册
+    link: /linux/
+
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan
 ---

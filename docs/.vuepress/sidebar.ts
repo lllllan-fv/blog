@@ -4,5 +4,6 @@ export default sidebar({
     "/grocery/": "structure",
     "/amusement/": "structure",
     "/redis/": "structure",
-    "/java-utils": "structure"
+    "/java-utils": "structure",
+    "/linux/": "structure"
 });
