@@ -33,9 +33,14 @@ features:
     link: /java-utils/
 
   - title: Linux 烩总
-    icon: tool
+    icon: linux
     details: Linux 学习笔记和查询手册
     link: /linux/
+
+  - title: Golang 聊天室
+    icon: golang
+    details: Golang 入门练手项目
+    link: /community_system/
 
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan

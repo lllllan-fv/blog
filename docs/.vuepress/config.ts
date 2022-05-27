@@ -21,7 +21,7 @@ export default defineUserConfig({
       {
         // 图标仓库
         rel: "stylesheet",
-        href: "//at.alicdn.com/t/font_3381669_7oio28r0y3f.css",
+        href: "//at.alicdn.com/t/font_3381669_2j2vp2zfrke.css",
       },
     ],    
   ], 

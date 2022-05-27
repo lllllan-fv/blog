@@ -5,5 +5,6 @@ export default sidebar({
     "/amusement/": "structure",
     "/redis/": "structure",
     "/java-utils": "structure",
-    "/linux/": "structure"
+    "/linux/": "structure",
+    "/community_system/": "structure"
 });

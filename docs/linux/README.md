@@ -1,6 +1,6 @@
 ---
 # 这是页面的图标
-icon: page
+icon: linux
 
 # 这是文章的标题
 title: Linux 烩总
