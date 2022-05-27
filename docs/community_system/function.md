@@ -33,7 +33,7 @@ tag:
 ### Msg 类
 
 - Msg 类，其中 str 表示整个用户输入，其中 code 表示该输入的行为类别
-- 三个常量，分别是改名、私聊、公聊的代号
+- 三个常量，分别是改名、私聊、公聊、查询在线用户的代号
 - calCode，在新建 Msg 的时候会根据用户的输入去判定用户行为
 
 ```go
@@ -50,6 +50,7 @@ const (
 	Rename = iota + 1
 	PrivateChat
 	PublicChat
+	OnlineUserList
 )
 
 func NewMsg(str string) *Msg {
@@ -70,6 +71,10 @@ func NewMsg(str string) *Msg {
 func calCode(str string) int {
 	n := len(strings.Split(str, "|"))
 
+	if str == "who" {
+		return OnlineUserList
+	}
+    
 	if len(str) > 4 && str[:4] == "pub|" && n == 2 {
 		return PublicChat
 	}
@@ -116,6 +121,9 @@ func (this *User) ListenWrite(server *Server) {
 		case PublicChat:
 			this.PrintMessage("public chat")
 			break
+		case OnlineUserList:
+			this.PrintMessage("who")
+			break
 		case 0:
 			this.PrintMessage("[server]: 我不理解")
 			break
@@ -140,4 +148,4 @@ to|rose|hello
 pub|hello
 ```
 
-![image-20220528002036557](./img/image-20220528002036557.png)
+![image-20220528002636146](./img/image-20220528002636146.png)
