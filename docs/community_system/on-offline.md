@@ -105,4 +105,24 @@ func (this *User) ListenWrite(server *Server) {
 
 ## 执行测试
 
+```sh
+go build -o server main.go server.go user.go
+./server
+```
+
+```sh
+nc 127.0.0.1 8888
+^C
+```
+
+```sh
+nc 127.0.0.1 8888
+^C
+```
+
+```sh
+nc 127.0.0.1 8888
+^C
+```
+
 ![image-20220528000216977](./img/image-20220528000216977.png)
