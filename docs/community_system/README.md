@@ -45,3 +45,10 @@ tag:
 
 <iframe src="https://lllllan.cn/personal_data/download/golang_community_system.mp4" scrolling="no" width="100%" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+
+
+## 文档说明
+
+接下来的几篇文章，会将整个系统（其实也没几百行）分阶段地进行讲解。也可以直接到项目仓库查看历史提交，之前在写的时候，文档的顺序会大致地参考提交顺序。
+
+![image-20220527234516205](./img/image-20220527234516205.png)
