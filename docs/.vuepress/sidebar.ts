@@ -6,5 +6,6 @@ export default sidebar({
     "/redis/": "structure",
     "/java-utils": "structure",
     "/linux/": "structure",
-    "/community_system/": "structure"
+    "/community_system/": "structure",
+    "/docker/": "structure"
 });
