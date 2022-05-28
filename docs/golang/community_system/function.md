@@ -149,3 +149,185 @@ pub|hello
 ```
 
 ![image-20220528002636146](./img/image-20220528002636146.png)
+
+
+
+## 改名功能
+
+规定我们的改名格式：`rename|new name`
+
+前半段的 `rename|` 是改名指令，后面是想要修改的新名字，这里的指令判定由 `Msg` 完成
+
+
+
+（补充 `user.go/ListenWrite()` 函数）
+
+```go
+// ListenWrite 监听用户输入
+func (this *User) ListenWrite(server *Server) {
+	buf := make([]byte, 4096)
+
+	for {
+        ...
+        
+		switch msg.code {
+		case Rename:
+			str := strings.Split(msg.str, "|")[1]
+			newName := strings.TrimSpace(str)
+			this.Rename(server, newName)
+			break
+        ...
+		}
+	}
+}
+```
+
+
+
+
+
+（添加 `user.go/Renam()` 函数）
+
+```go
+func (this *User) Rename(server *Server, newName string) {
+	if newName == "" {
+		this.PrintMessage("[修改失败]: 用户名不能为空")
+		return
+	}
+
+	_, ok := server.UserMap[newName]
+	if ok {
+		this.PrintMessage("[修改失败]: 当前用户名已存在 ")
+		return
+	}
+
+	server.mapLock.Lock()
+	delete(server.UserMap, this.Name)
+	server.UserMap[newName] = this
+	server.mapLock.Unlock()
+
+	this.Name = newName
+	this.PrintMessage("[修改成功]: " + newName)
+}
+```
+
+
+
+## 公聊功能
+
+公聊功能是最简单的，只要调用我们先前写好的 `Server.BroadCast()` 方法即可
+
+
+
+（补充 `user.go/ListenWrite()` 函数）
+
+```go
+func (this *User) ListenWrite(server *Server) {
+ 	...
+    
+    	case PublicChat:
+			this.PublicChat(server, split[1])
+			break
+    
+    ...
+}
+```
+
+
+
+
+
+（添加 `user.go/PublicChat()` 函数）
+
+```go
+func (this *User) PublicChat(server *Server, msg string) {
+	server.BroadCast(this, msg)
+}
+```
+
+
+
+
+
+## 查询用户
+
+因为用户的改名，是没有进行广播的（当然你完全可以去广播），我们需要提供方法供用户去查询其他用户的用户名，这样我们才能指定用户进行私聊
+
+
+
+（补充 `user.go/ListenWrite()`）
+
+```go
+func (this *User) ListenWrite(server *Server) {
+ 	...
+    
+	    case OnlineUserList:
+			this.PrintOnlineUserList(server)
+			break
+    
+    ...
+}
+```
+
+
+
+
+
+（添加 `user.go/PrintOnlineUserList()` 函数）
+
+```go
+// PrintOnlineUserList 查询在线用户
+func (this *User) PrintOnlineUserList(server *Server) {
+	server.mapLock.Lock()
+	for _, user := range server.UserMap {
+		if user != this {
+			this.PrintMessage("[" + user.Name + "]: 在线")
+		}
+	}
+	server.mapLock.Unlock()
+}
+```
+
+
+
+## 私聊功能
+
+
+
+（补充 `user.go/ListenWrite()` 函数）
+
+```go
+// ListenWrite 监听用户输入
+func (this *User) ListenWrite(server *Server) {
+	...
+    
+		case PrivateChat:
+			to := strings.TrimSpace(split[1])
+			this.PrivateChatTo(server, to, split[2])
+			break
+	
+	...
+}
+```
+
+
+
+（添加 `user.go/PrivateChat()` 函数）
+
+```go
+// PrivateChatTo 私聊
+func (this *User) PrivateChatTo(server *Server, to string, msg string) {
+	if to == "" {
+		this.PrintMessage("[发送失败]: 用户名不能为空")
+	}
+
+	user, ok := server.UserMap[to]
+	if ok {
+		this.PrintMessage("[发送成功]")
+		user.PrintMessage("[私聊消息][" + this.Name + "]: " + msg)
+	} else {
+		this.PrintMessage("[发送失败]: 用户不存在")
+	}
+}
+```
+
