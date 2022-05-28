@@ -1,6 +1,6 @@
 ---
 # 这是页面的图标
-icon: golang
+icon: community
 
 # 这是文章的标题
 title: 启动服务

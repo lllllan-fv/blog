@@ -37,10 +37,10 @@ features:
     details: Linux 学习笔记和查询手册
     link: /linux/
 
-  - title: Golang 聊天室
+  - title: Golang 练手项目
     icon: golang
     details: Golang 入门练手项目
-    link: /community_system/
+    link: /golang/
 
   - title: Docker
     icon: docker
