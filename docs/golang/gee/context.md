@@ -329,6 +329,43 @@ func (engine *Engine) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
 
 
+## 使用 Gee
+
+```go
+package main
+
+import (
+	"net/http"
+
+	"gee"
+)
+
+func main() {
+	r := gee.New()
+
+	r.GET("/", func(context *gee.Context) {
+		context.HTML(http.StatusOK, "<h1>Hello Gee</h1>")
+	})
+	r.GET("/hello", func(context *gee.Context) {
+		// expect /hello?name=geektutu
+		context.String(http.StatusOK, "hello %s, you're at %s\n", context.Query("name"), context.Path)
+	})
+
+	r.POST("/login", func(context *gee.Context) {
+		context.JSON(http.StatusOK, gee.H{
+			"username": context.PostForm("username"),
+			"password": context.PostForm("password"),
+		})
+	})
+
+	r.Run(":8080")
+}
+```
+
+
+
+
+
 ## 参考
 
 - [Go语言动手写Web框架 - Gee第二天 上下文Context | 极客兔兔 (geektutu.com)](https://geektutu.com/post/gee-day2.html#设计Context)
