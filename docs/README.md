@@ -27,11 +27,6 @@ features:
     details: 只会用 api 就只能当码农了，多学一点，摩多摩多
     link: /redis/
 
-  - title: Java 工具类
-    icon: tool
-    details: spring-boot 项目 Java 工具类合集
-    link: /java-utils/
-
   - title: Linux 烩总
     icon: linux
     details: Linux 学习笔记和查询手册
