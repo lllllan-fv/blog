@@ -43,7 +43,7 @@ tag:
 
 ## 成品演示
 
-<iframe src="https://lllllan.cn/personal_data/download/golang_community_system.mp4" scrolling="no" width="100%" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<iframe src="http://link.blog.lllllan.cn/golang_community_system.mp4" scrolling="no" width="100%" height="600px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
