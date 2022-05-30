@@ -42,6 +42,11 @@ features:
     details: Docker 疑难杂项及学习记录
     link: /docker/
 
+  - title: Gin Web Framework
+    icon: gin
+    details: Gin Web 框架
+    link: /gin/
+
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan
 ---
