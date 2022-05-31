@@ -79,6 +79,10 @@ localhost:8080/hello
 
 ## 实现 http.Handler 接口
 
+前面的端口监听中没有指定实现对象 `http.ListenAndServe(":8080", nil)`，默认通过查找 http 中的回调方法。也就是通过 `http.HandleFunc()` 去处理 HTTP 请求。
+
+从这里就是说，我们可以自定义个一个实现了 `ServeHTTP(writer http.ResponseWriter, request *http.Request)` 方法的类，通过这个类去处理 HTTP 请求。效果相同，只是我们能够更加丰富我们的处理。 
+
 ```go
 package main
 
@@ -117,10 +121,6 @@ func main() {
 }
 
 ```
-
-
-
-当然这里你访问两个网址会得到和前面相同的结果，这里主要是实现的方式不同。
 
 
 
