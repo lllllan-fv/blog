@@ -83,4 +83,4 @@ func main() {
 $ go run main.go
 ```
 
-![image-20220602171447422](./img/image-20220602171447422.png)
+![image-20220602171813181](./img/image-20220602171813181.png)
