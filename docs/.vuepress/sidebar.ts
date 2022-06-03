@@ -7,5 +7,6 @@ export default sidebar({
     "/linux/": "structure",
     "/golang/": "structure",
     "/docker/": "structure",
-    "/gin/": "structure"
+    "/gin/": "structure",
+    "/design-pattern/": "structure"
 });
