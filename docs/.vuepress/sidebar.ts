@@ -8,5 +8,6 @@ export default sidebar({
     "/golang/": "structure",
     "/docker/": "structure",
     "/gin/": "structure",
-    "/design-pattern/": "structure"
+    "/design-pattern/": "structure",
+    "/grpc/": "structure"
 });

@@ -47,6 +47,11 @@ features:
     details: Gin Web 框架
     link: /gin/
 
+  - title: gRPC
+    icon: grpc
+    details: gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP/2 设计
+    link: /grpc/
+
   - title: 设计模式
     icon: design
     details: 设计模式初级学习
