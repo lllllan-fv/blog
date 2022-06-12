@@ -56,6 +56,11 @@ features:
     icon: design
     details: 设计模式初级学习
     link: /design-pattern/
+  
+  - title: 最近学习笔记
+    icon: note
+    details: 最近学习笔记
+    link: /learn/
 
 copyright: false
 footer: MIT Licensed | Copyright © 2022-present lllllan
