@@ -9,5 +9,6 @@ export default sidebar({
     "/docker/": "structure",
     "/gin/": "structure",
     "/design-pattern/": "structure",
-    "/grpc/": "structure"
+    "/grpc/": "structure",
+    "/learn/": "structure"
 });
