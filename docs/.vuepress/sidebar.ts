@@ -6,9 +6,7 @@ export default sidebar({
     "/redis/": "structure",
     "/linux/": "structure",
     "/golang/": "structure",
-    "/docker/": "structure",
-    "/gin/": "structure",
-    "/design-pattern/": "structure",
-    "/grpc/": "structure",
+    "/docker/": "structure", 
+    "/design-pattern/": "structure", 
     "/learn/": "structure"
 });

@@ -32,25 +32,15 @@ features:
     details: Linux 学习笔记和查询手册
     link: /linux/
 
-  - title: Golang 练手项目
+  - title: Golang 笔记
     icon: golang
-    details: Golang 入门练手项目
+    details: Golang 学习笔记和心得
     link: /golang/
 
   - title: Docker
     icon: docker
     details: Docker 疑难杂项及学习记录
     link: /docker/
-
-  - title: Gin Web Framework
-    icon: gin
-    details: Gin Web 框架
-    link: /gin/
-
-  - title: gRPC
-    icon: grpc
-    details: gRPC 是一个高性能、开源和通用的 RPC 框架，面向移动和 HTTP/2 设计
-    link: /grpc/
 
   - title: 设计模式
     icon: design
