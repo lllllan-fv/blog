@@ -3,28 +3,10 @@ import theme from "./theme";
 
 export default defineUserConfig({
   lang: "zh-CN",
-  title: "lllllan",
-  description: "盛意以江河，江河不及你",
+  title: "主题演示",
+  description: "vuepress-theme-hope 的演示",
 
   base: "/",
-
-  head: [
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "//at.alicdn.com/t/font_2410206_mfj6e1vbwo.css",
-      },
-    ],
-    [
-      "link",
-      {
-        // 图标仓库
-        rel: "stylesheet",
-        href: "//at.alicdn.com/t/font_3381669_5ziom4i1yjc.css",
-      },
-    ],    
-  ], 
 
   theme,
 });
