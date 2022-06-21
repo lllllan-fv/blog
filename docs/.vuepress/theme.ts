@@ -3,20 +3,20 @@ import navbar from "./navbar";
 import sidebar from "./sidebar";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-v2-demo.mrhope.site",
+  hostname: "http://blog.lllllan.cn",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "lllllan",
+    url: "http://lllllan.cn",
   },
 
-  iconAssets: "iconfont",
+  iconPrefix: "iconfont icon-",
 
-  logo: "/logo.svg",
+  logo: "/logo.png",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "https://github.com/lllllan-fv/blog",
 
-  docsDir: "demo/src",
+  docsDir: "docs",
 
   // navbar
   navbar: navbar,
@@ -24,45 +24,23 @@ export default hopeTheme({
   // sidebar
   sidebar: sidebar,
 
-  footer: "默认页脚",
+  footer: '<a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备2021095794号 </a><br><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002015830"style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><imgsrc="personal_data/img/beian.png" style="float:left;" />浙公网安备 33011002015830号</a>',
 
   displayFooter: true,
 
   pageInfo: ["Author", "Original", "Date", "Category", "Tag", "ReadingTime"],
 
   blog: {
-    description: "一个前端开发者",
-    intro: "/intro.html",
+    description: "",
+    intro: "",
     medias: {
-      Baidu: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
-      Email: "https://example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "https://example.com",
-      Instagram: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
-      QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
-      Steam: "https://example.com",
-      Twitter: "https://example.com",
-      Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
-      Youtube: "https://example.com",
-      Zhihu: "https://example.com",
+      // Dingding: "https://example.com",
+      // Email: "https://example.com",,
+      Gitee: "https://gitee.com/lllllan-fv",
+      GitHub: "https://github.com/lllllan-fv",
+      // Gitlab: "https://example.com",
+      // QQ: "https://example.com",",
+      // Wechat: "https://example.com"
     },
   },
 
@@ -110,4 +88,12 @@ export default hopeTheme({
       },
     },
   },
+  
+  themeColor: {
+    1: "#2196f3",
+    2: "#3eaf7c",
+    3: "#46c3db",
+    4: "#f3558e",
+    // 4: "#85203b"
+  }
 });
