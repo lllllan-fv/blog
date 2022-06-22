@@ -38,8 +38,6 @@ tag:
 
 ## 设计一个类
 
-::: note 鸭子
-
 *这里借用书中的一些栗子*
 
 
@@ -52,16 +50,16 @@ public class Duck {
 	private string desc;
 
 	// 呱呱叫
-	public void quack() {};
+	public void quack() {}
 
 	// 起飞
-	public void fly() {};
+	public void fly() {}
 
 	...
 }
 ```
 
-:::
+
 
 
 
@@ -74,21 +72,79 @@ public class Duck {
 - 比如橡皮鸭，人家只是个玩具，当然不会飞啦
 - 比如烤鸭，都做成菜了，还怎么叫
 
-==因此通过继承类的方式，一定程度上能够实现代码的复用，但是大多数时候的行为和特征不容易抽象和概括==
+==因此通过继承类的方式，一定程度上能够实现代码的复用，但是大多数时候的行为和特征不容易抽象和概括。== 如果你要对某些行为和特征进行抽象，那你就必须考虑到是否所有的子类都具有这些行为和特征；如果你选择在子类中对方法进行重写，这其实变成主动抛弃代码复用的优点。
 
 
 
-:::: code-group
+### 实现多接口
 
-::: code-group-item 橡皮鸭
+从个体特征的角度出发，或许我们可以定义一些 「行为」接口，让不同的类自主地去选择是否要实现他们。
+
+
+
+::: tabs
+
+
+
+@tab  行为接口
+
+定义鸭叫和飞行两个接口，让鸭的子类选择实现
+
+```java
+public interface quackAble {
+    public void quack();
+}
+
+public interface flyAble {
+    public void fly();
+}
+```
+
+
+
+@tab 橡皮鸭
+
+```java
+public class RubberDuck implements quackAble {
+    
+    @Override
+    public void quack() {}
+}
+```
+
+
+
+@tab 气球鸭
+
+```java
+public class BalloonDuck implements flyAble {
+    
+    @Override 
+    public void fly() {}
+}
+```
+
+
 
 :::
 
-::: code-group-item 烤鸭
 
-:::
 
-::::
+==实现多接口在选择上能够更加的自由，但是接口必须要亲自实现，失去了代码复用的优点。==
+
+
+
+### 对象组合
+
+我们可以把上面的一组行为，封装成一族算法，比如一族鸭叫，不同的鸭子拥有不同的叫法，我们可以创建不同的行为类去实现他们。
+
+
+
+```java
+pu
+```
+
+
 
 
 
