@@ -219,6 +219,70 @@ public class Solution {
 
 
 
+## 理解动态
+
+对于一些说 「策略模式」的优点在于可以省去复杂的 「if - else -」结构的，我可能不太赞同。因为你不适用策略模式也有办法能够省去复杂结构，而你使用策略模式的真正意图也不在这里。
+
+在我看来，==策略模式最大的优点在于能够动态地更换策略，让类更加灵活、代码更加简洁==
+
+
+
+### 传统的继承和实现
+
+对于传统的继承类和实现接口，在你定义类的时候，就已经决定了这个类能做什么事情。
+
+
+
+虽然你完全可以决定子类对父类的方法是否进行重写，你也可以决定在创建实例之后是否调用这些方法。但是终归是你创建的这个类，能做什么事情，早在编译时就已经被决定好了。
+
+
+
+```java
+class Duck {
+    public void duck() {}
+}
+
+class DonaldDuck extends Duck {
+    @Override
+    public void quack() {
+        System.out.println("hello donald!");
+    }
+}
+
+class Solution {
+    
+    public static void main(string[] args) {
+		DonaldDuck donaldDuck = new DonaldDuck();
+        
+        // 我只能调用早就写好的 quack 方法
+        donaldDuck.quack();
+    }
+}
+```
+
+
+
+### 灵活的策略模式
+
+对于上面的策略模式的实例，对鸭叫的行为进行封装之后，我们可以在程序运行的过程中，随意地去替换这只鸭子的叫法。真正的实现了 **动态** 和灵活。
+
+
+
+```java
+public class Solution {
+    public static void main(string[] args) {
+        Duck donaldDuck = new Duck(new QuackofDonaldDuck());
+        donaldDuck.quack();
+        
+        // 程序运行过程中，我想让唐老鸭换种叫法
+        donaldDuck.setQuackBehavior(new QuackOfOrdinaryDuck());
+        donaldDuck.quack();
+    }
+}
+```
+
+
+
 ## 参考
 
 - 《Head First 设计模式》
