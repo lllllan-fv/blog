@@ -46,16 +46,16 @@ tag:
 
 ```java
 public class Duck {
-	// 基本描述
-	private string desc;
+    // 基本描述
+    private string desc;
+    
+    // 呱呱叫
+    public void quack() {}
 
-	// 呱呱叫
-	public void quack() {}
-
-	// 起飞
-	public void fly() {}
-
-	...
+    // 起飞
+    public void fly() {}
+    
+    ...
 }
 ```
 
@@ -140,13 +140,82 @@ public class BalloonDuck implements flyAble {
 
 
 
+::: tabs
+
+
+
+@tab 策略类 | 鸭叫
+
 ```java
-pu
+public interface QuackAble {
+    public void quack();
+}
+
+public class QuackOfOrdinaryDuck implements QuackAble {
+    
+    @Override
+    public void quack() {
+        System.out.println("Ordinary duck quack!!!");
+    }
+}
+
+public class QuackOfDonaldDuck implements QuackAble {
+    
+    @Override
+    public void quack {
+        System.out.println("Donald duck quack!!!");
+    }
+}
 ```
 
 
 
+@tab 进行组合
 
+```java
+public class Duck {
+    private QuackAble quackBehavior;
+    
+    public Duck() {}
+    
+    public Duck(QuackAble quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+    
+    public void setQuackBehavior(QuackAble quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+    
+    public void quack() {
+        if (quackBehavior != null) {
+            quackBehavior.quack();
+        } else {
+            System.out.println("this duck can not quack!!!");
+        }
+    }
+}
+```
+
+
+
+@tab 具体实现
+
+```java
+public class Solution {
+    public static void main(string[] args) {
+        Duck donaldDuck = new Duck(new QuackofDonaldDuck());
+        donaldDuck.quack();
+        
+        // 程序运行过程中，我想让唐老鸭换种叫法
+        donaldDuck.setQuackBehavior(new QuackOfOrdinaryDuck());
+        donaldDuck.quack();
+    }
+}
+```
+
+
+
+:::
 
 
 
